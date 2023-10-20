@@ -41,6 +41,8 @@ namespace DesktopContactsApp
 
         private void ReadDatabase()
         {
+            List<Contact> contacts;
+
             //Connect to the database (close after the code because end the using)
             using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
             {
@@ -48,7 +50,20 @@ namespace DesktopContactsApp
                 connection.CreateTable<Contact>();
 
                 //Retrieve the Contact table as a list of objects
-                var contacts = connection.Table<Contact>().ToList();
+                contacts = connection.Table<Contact>().ToList();
+            }
+
+            //If readed correctly from database
+            if(contacts != null)
+            {
+                //For each contact readed add a row in the contacts list view
+                foreach(var contact in contacts)
+                {
+                    contactsListView.Items.Add(new ListViewItem()
+                    {
+                        Content = contact
+                    });
+                }
             }
         }
     }
