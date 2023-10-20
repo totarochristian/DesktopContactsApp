@@ -36,15 +36,8 @@ namespace DesktopContactsApp
                 Phone = phoneTextBox.Text
             };
 
-            //Set the database name
-            string databaseName = "Contacts.db";
-            //Set the folder path equals to "My Documents" path
-            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            //Define the database path as a path combine of folder path + database name
-            string databasePath = System.IO.Path.Combine(folderPath, databaseName);
-
             //Connect to the database (close after the code because end the using)
-            using (SQLiteConnection connection = new SQLiteConnection(databasePath))
+            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
             {
                 //Create the Contact table, based on the Contact class, only if not exists
                 connection.CreateTable<Contact>();
