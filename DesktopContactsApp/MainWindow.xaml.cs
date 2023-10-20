@@ -56,6 +56,8 @@ namespace DesktopContactsApp
             //If readed correctly from database
             if(contacts != null)
             {
+                //Clear the contacts lsit view
+                contactsListView.Items.Clear();
                 //For each contact readed add a row in the contacts list view
                 foreach(var contact in contacts)
                 {
