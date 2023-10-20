@@ -8,7 +8,7 @@
         Title="NewContactWindow" Height="450" Width="800">
     <Grid>
         <StackPanel Margin="10">
-            
+            <TextBox x:Name="nameTextBox" />
         </StackPanel>
     </Grid>
 </Window>
