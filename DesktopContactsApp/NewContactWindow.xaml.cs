@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopContactsApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,12 @@ namespace DesktopContactsApp
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             // To do: save contact defined by the user
+            Contact contact = new Contact()
+            {
+                Name = nameTextBox.Text,
+                Email = emailTextBox.Text,
+                Phone = phoneTextBox.Text
+            };
 
             this.Close();
         }
