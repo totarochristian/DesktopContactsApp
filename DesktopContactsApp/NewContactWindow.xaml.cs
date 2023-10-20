@@ -49,6 +49,9 @@ namespace DesktopContactsApp
             //Create the Contact table, based on the Contact class, only if not exists
             connection.CreateTable<Contact>();
 
+            //Insert the contact defined in the related Contact table (is automatic, use the class type)
+            connection.Insert(contact);
+
             this.Close();
         }
     }
