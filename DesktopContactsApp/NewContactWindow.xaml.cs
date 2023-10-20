@@ -23,5 +23,10 @@ namespace DesktopContactsApp
         {
             InitializeComponent();
         }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

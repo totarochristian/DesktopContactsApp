@@ -11,6 +11,7 @@
             <TextBox x:Name="nameTextBox" Margin="0,0,0,5"/>
             <TextBox x:Name="emailTextBox" Margin="0,0,0,5"/>
             <TextBox x:Name="phoneTextBox" Margin="0,0,0,5"/>
+            <Button x:Name="SaveBtn" Content="Save" Click="SaveBtn_Click" />
         </StackPanel>
     </Grid>
 </Window>
