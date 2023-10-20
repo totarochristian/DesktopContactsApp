@@ -43,7 +43,11 @@ namespace DesktopContactsApp
             //Define the database path as a path combine of folder path + database name
             string databasePath = System.IO.Path.Combine(folderPath, databaseName);
 
+            //Connect to the database
             SQLiteConnection connection = new SQLiteConnection(databasePath);
+
+            //Create the Contact table, based on the Contact class, only if not exists
+            connection.CreateTable<Contact>();
 
             this.Close();
         }
