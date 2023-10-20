@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
-
+        <Button x:Name="NewContactBtn" Content="New contact" Click="NewContactBtn_Click"/>
     </StackPanel>
 </Window>
