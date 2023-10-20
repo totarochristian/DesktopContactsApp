@@ -26,7 +26,9 @@ namespace DesktopContactsApp
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
+            // To do: save contact defined by the user
 
+            this.Close();
         }
     }
 }
