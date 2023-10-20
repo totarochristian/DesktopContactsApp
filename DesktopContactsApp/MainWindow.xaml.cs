@@ -47,8 +47,8 @@ namespace DesktopContactsApp
                 //Create the Contact table, based on the Contact class, only if not exists
                 connection.CreateTable<Contact>();
 
-                //Retrieve the Contact table
-                var contacts = connection.Table<Contact>();
+                //Retrieve the Contact table as a list of objects
+                var contacts = connection.Table<Contact>().ToList();
             }
         }
     }
