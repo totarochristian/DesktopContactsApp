@@ -1,4 +1,5 @@
 ﻿using DesktopContactsApp.Classes;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,13 +28,22 @@ namespace DesktopContactsApp
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            // To do: save contact defined by the user
+            //Define the contact to be saved
             Contact contact = new Contact()
             {
                 Name = nameTextBox.Text,
                 Email = emailTextBox.Text,
                 Phone = phoneTextBox.Text
             };
+
+            //Set the database name
+            string databaseName = "Contacts.db";
+            //Set the folder path equals to "My Documents" path
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            //Define the database path as a path combine of folder path + database name
+            string databasePath = System.IO.Path.Combine(folderPath, databaseName);
+
+            SQLiteConnection connection = new SQLiteConnection(databasePath);
 
             this.Close();
         }
