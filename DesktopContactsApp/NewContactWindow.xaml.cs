@@ -52,6 +52,9 @@ namespace DesktopContactsApp
             //Insert the contact defined in the related Contact table (is automatic, use the class type)
             connection.Insert(contact);
 
+            //Close the connection
+            connection.Close();
+
             this.Close();
         }
     }
