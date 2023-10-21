@@ -1,4 +1,5 @@
 ﻿using DesktopContactsApp.Classes;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,18 @@ namespace DesktopContactsApp
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
+            //Connect to the database (close after the code because end the using)
+            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+            {
+                //Create the Contact table, based on the Contact class, only if not exists
+                connection.CreateTable<Contact>();
 
+                //Delete the contact opened in this window
+                connection.Delete(contact);
+            }
+
+            //Close the window
+            this.Close();
         }
     }
 }
