@@ -33,7 +33,7 @@ namespace DesktopContactsApp.Controls
 
         private static void SetText(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            ContactControl contact = d as ContactControl;
         }
 
         public ContactControl()
