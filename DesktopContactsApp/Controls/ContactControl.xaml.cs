@@ -38,8 +38,8 @@ namespace DesktopContactsApp.Controls
             if (control != null)
             {
                 control.nameTextBlock.Text = (e.NewValue as Contact).Name;
-                control.emailTextBlock.Text = = (e.NewValue as Contact).Email;
-                control.phoneTextBlock.Text = = (e.NewValue as Contact).Phone;
+                control.emailTextBlock.Text = (e.NewValue as Contact).Email;
+                control.phoneTextBlock.Text = (e.NewValue as Contact).Phone;
             }
         }
 
