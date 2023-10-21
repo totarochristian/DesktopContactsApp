@@ -68,6 +68,9 @@ namespace DesktopContactsApp
         {
             //Convert the sender to a text box
             TextBox searchTextBox = sender as TextBox;
+
+            //Retrieve a list of contacts filtered on the name (name must contain the value in the filter text box)
+            var filteredList = contacts.Where(contact => contact.Name.Contains(searchTextBox.Text)).ToList();
         }
     }
 }
