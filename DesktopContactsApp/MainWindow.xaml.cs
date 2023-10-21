@@ -61,7 +61,7 @@ namespace DesktopContactsApp
             }
         }
 
-        private void filterTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
