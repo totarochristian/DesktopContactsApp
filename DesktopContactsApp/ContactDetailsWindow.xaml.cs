@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopContactsApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,13 @@ namespace DesktopContactsApp
     /// </summary>
     public partial class ContactDetailsWindow : Window
     {
-        public ContactDetailsWindow()
+        Contact contact;
+
+        public ContactDetailsWindow(Contact contact)
         {
             InitializeComponent();
+
+            this.contact = contact;
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
