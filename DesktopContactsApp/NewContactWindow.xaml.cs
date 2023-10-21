@@ -54,5 +54,11 @@ namespace DesktopContactsApp
             //Close the window
             this.Close();
         }
+
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //Close the window
+            this.Close();
+        }
     }
 }

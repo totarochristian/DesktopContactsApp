@@ -17,6 +17,7 @@
             <TextBlock Text="Phone:"/>
             <TextBox x:Name="phoneTextBox" Margin="0,0,0,5"/>
             <Button x:Name="SaveBtn" Content="Save" Click="SaveBtn_Click" />
+            <Button x:Name="CancelBtn" Content="Cancel" Click="CancelBtn_Click" />
         </StackPanel>
     </Grid>
 </Window>
