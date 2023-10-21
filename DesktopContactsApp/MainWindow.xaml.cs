@@ -66,7 +66,8 @@ namespace DesktopContactsApp
 
         private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            //Convert the sender to a text box
+            TextBox searchTextBox = sender as TextBox;
         }
     }
 }
