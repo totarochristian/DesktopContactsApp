@@ -25,7 +25,14 @@ namespace DesktopContactsApp.Controls
 
         public Contact Contact {
             get {  return contact; }
-            set {  contact = value; } 
+            set { 
+                contact = value;
+
+                //assign the text blocks values using the new contact value setted
+                nameTextBlock.Text = contact.Name;
+                emailTextBlock.Text = contact.Email;
+                phoneTextBlock.Text = contact.Phone;
+            } 
         }
 
         public ContactControl()
