@@ -37,7 +37,23 @@ namespace DesktopContactsApp
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
+            //Update contact values before update in the database
+            contact.Name = nameTextBox.Text;
+            contact.Email = emailTextBox.Text;
+            contact.Phone = phoneTextBox.Text;
 
+            //Connect to the database (close after the code because end the using)
+            using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+            {
+                //Create the Contact table, based on the Contact class, only if not exists
+                connection.CreateTable<Contact>();
+
+                //Update the contact opened in this window
+                connection.Update(contact);
+            }
+
+            //Close the window
+            this.Close();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
