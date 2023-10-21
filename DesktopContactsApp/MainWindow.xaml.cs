@@ -22,9 +22,14 @@ namespace DesktopContactsApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Contact> contacts;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //Initialize the contacts list
+            contacts = new List<Contact>();
 
             //Read the database at the opening of the main window
             ReadDatabase();
@@ -41,8 +46,6 @@ namespace DesktopContactsApp
 
         private void ReadDatabase()
         {
-            List<Contact> contacts;
-
             //Connect to the database (close after the code because end the using)
             using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
             {
