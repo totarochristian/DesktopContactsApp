@@ -3,7 +3,7 @@ Basic WPF desktop contacts app
 ***
 
 ## Table of contents
-- [GUI](#guy)
+- [GUI](#gui)
   - [Main](#main)
   - [New contact](#new-contact)
   - [Contact details](#contact-details)
