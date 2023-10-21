@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopContactsApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,13 @@ namespace DesktopContactsApp.Controls
     /// </summary>
     public partial class ContactControl : UserControl
     {
+        private Contact contact;
+
+        public Contact Contact {
+            get {  return contact; }
+            set {  contact = value; } 
+        }
+
         public ContactControl()
         {
             InitializeComponent();
