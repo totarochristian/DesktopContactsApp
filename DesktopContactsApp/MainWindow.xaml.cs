@@ -52,8 +52,8 @@ namespace DesktopContactsApp
                 //Create the Contact table, based on the Contact class, only if not exists
                 connection.CreateTable<Contact>();
 
-                //Retrieve the Contact table as a list of objects
-                contacts = connection.Table<Contact>().ToList();
+                //Retrieve the Contact table as a list of objects, ordered by name
+                contacts = (connection.Table<Contact>().ToList()).OrderBy(contact => contact.Name).ToList();
             }
 
             //If readed correctly from database
