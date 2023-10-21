@@ -11,6 +11,11 @@
         <Button x:Name="NewContactBtn" Content="New contact" Click="NewContactBtn_Click"/>
         <TextBox x:Name="filterTextBox" Margin="0,5,0,5" TextChanged="FilterTextBox_TextChanged"/>
         <ListView x:Name="contactsListView" Margin="0,5,0,0" Height="280" SelectionChanged="ContactsListView_SelectionChanged">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <uc:ContactControl Contact="{Binding}"/>
