@@ -46,6 +46,7 @@ namespace DesktopContactsApp
                 connection.Insert(contact);
             }
 
+            //Close the window
             this.Close();
         }
     }
