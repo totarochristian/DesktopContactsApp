@@ -60,5 +60,10 @@ namespace DesktopContactsApp
                 contactsListView.ItemsSource = contacts;
             }
         }
+
+        private void filterTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
