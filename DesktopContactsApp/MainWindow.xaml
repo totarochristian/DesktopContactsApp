@@ -12,9 +12,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock FontSize="20" FontWeight="Bold"/>
-                        <TextBlock FontSize="15" Foreground="DodgerBlue"/>
-                        <TextBlock FontSize="15" FontStyle="Italic"/>
+                        <TextBlock FontSize="20" FontWeight="Bold" Text="{Binding Name}"/>
+                        <TextBlock FontSize="15" Foreground="DodgerBlue" Text="{Binding Email}"/>
+                        <TextBlock FontSize="15" FontStyle="Italic" Text="{Binding Phone}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
