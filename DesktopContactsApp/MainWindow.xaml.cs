@@ -75,5 +75,10 @@ namespace DesktopContactsApp
             //Add filtered contacts list to the item source of contacts list view
             contactsListView.ItemsSource = filteredList;
         }
+
+        private void ContactsListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
