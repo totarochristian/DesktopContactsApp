@@ -70,7 +70,7 @@ namespace DesktopContactsApp
             TextBox searchTextBox = sender as TextBox;
 
             //Retrieve a list of contacts filtered on the name (name must contain the value in the filter text box)
-            var filteredList = contacts.Where(contact => contact.Name.Contains(searchTextBox.Text)).ToList();
+            var filteredList = contacts.Where(contact => contact.Name.ToLower().Contains(searchTextBox.Text.ToLower())).ToList();
 
             //Add filtered contacts list to the item source of contacts list view
             contactsListView.ItemsSource = filteredList;
