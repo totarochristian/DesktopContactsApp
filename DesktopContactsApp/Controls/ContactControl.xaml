@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesktopContactsApp.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="80" d:DesignWidth="300">
-    <Grid>
+    <Grid Background="WhiteSmoke">
         <StackPanel Margin="5">
             <TextBlock x:Name="nameTextBlock" FontSize="20" FontWeight="Bold" Text="Name Lastname"/>
             <TextBlock x:Name="emailTextBlock" FontSize="15" Foreground="DodgerBlue" Text="example@domain.com"/>
