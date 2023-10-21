@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Title="ContactDetailsWindow" Height="200" Width="400">
+        Title="ContactDetailsWindow" Height="210" Width="400">
     <Grid>
         <StackPanel Margin="10">
             <TextBlock Text="Name:"/>
@@ -17,7 +17,7 @@
             <TextBlock Text="Phone:"/>
             <TextBox x:Name="phoneTextBox" Margin="0,0,0,5"/>
             <Button x:Name="updateButton" Content="Update" Margin="0,0,0,5" Click="UpdateButton_Click"/>
-            <Button x:Name="deleteButton" Content="Delete" Background="Red" Foreground="White" Click="DeleteButton_Click"/>
+            <Button x:Name="deleteButton" Content="Delete" Margin="0,0,0,5" Background="Red" Foreground="White" Click="DeleteButton_Click"/>
             <Button x:Name="CancelBtn" Content="Cancel" Click="CancelBtn_Click" />
         </StackPanel>
     </Grid>
