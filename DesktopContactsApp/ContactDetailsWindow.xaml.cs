@@ -28,6 +28,11 @@ namespace DesktopContactsApp
             InitializeComponent();
 
             this.contact = contact;
+
+            //Initialize the values of text boxs using the contact properties
+            nameTextBox.Text = contact.Name;
+            emailTextBox.Text = contact.Email;
+            phoneTextBox.Text = contact.Phone;
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
