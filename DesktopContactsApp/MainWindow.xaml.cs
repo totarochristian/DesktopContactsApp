@@ -78,7 +78,19 @@ namespace DesktopContactsApp
 
         private void ContactsListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //Retrieve the selected contact in the contacts list view
+            Contact selectedContat = contactsListView.SelectedItem as Contact;
 
+            //If user select contact
+            if(selectedContat != null)
+            {
+                //Create a new instance of contact details window and open it as dialog
+                ContactDetailsWindow contactDetailsWindow = new ContactDetailsWindow(selectedContat);
+                contactDetailsWindow.ShowDialog();
+
+                //Update list view when return to this window (after close the contact details window (show dialog wait the closing of the window))
+                ReadDatabase();
+            }
         }
     }
 }
