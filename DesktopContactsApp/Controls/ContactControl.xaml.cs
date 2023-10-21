@@ -29,7 +29,7 @@ namespace DesktopContactsApp.Controls
 
         // Using a DependencyProperty as the backing store for Contact.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ContactProperty =
-            DependencyProperty.Register("Contact", typeof(Contact), typeof(ContactControl), new PropertyMetadata(0,SetText));
+            DependencyProperty.Register("Contact", typeof(Contact), typeof(ContactControl), new PropertyMetadata(null,SetText));
 
         private static void SetText(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
